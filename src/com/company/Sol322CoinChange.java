@@ -20,6 +20,9 @@ Constraints:
         1 <= coins.length <= 12
         1 <= coins[i] <= 2^31 - 1
         0 <= amount <= 10^4*/
+
+/*    Sol322CoinChange sol = new Sol322CoinChange();
+    System.out.print(sol.coinChange(new int[] {1,2,5}, 11));*/
 public class Sol322CoinChange {
     public int coinChange(int[] coins, int amount){
         if(coins == null || coins.length == 0)
@@ -27,15 +30,23 @@ public class Sol322CoinChange {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);
         dp[0] = 0;
-        for(int i = 1; i < dp.length; i ++)
-            for(int j = 0; j < coins.length; j++)
-            {
-                if(i >= coins[j])
+        for(int i = 1; i < dp.length; i ++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (i >= coins[j])
                     dp[i] = Math.min(dp[i], 1 + dp[i - coins[j]]);
             }
+            printArray(dp);
+        }
         if(dp[amount]<=amount)
             return dp[amount];
         else
             return -1;
     }
+
+    public void printArray(int[] dp){
+        for(int i = 0; i < dp.length; i++)
+            System.out.print(dp[i] + " ");
+        System.out.println();
+    }
+
 }
