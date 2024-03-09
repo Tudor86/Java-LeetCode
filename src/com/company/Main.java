@@ -1,20 +1,17 @@
 package com.company;
 
+
 public class Main {
     public static void main(String[] args) {
 
+       // Sol7ReverseInteger sol = new Sol7ReverseInteger();
 
-    RevLinkedList lista = new RevLinkedList();
 
-    lista.add(1);
-    lista.add(2);
-    lista.add(15);
+     //   System.out.print(sol.reverse(123));
 
-    lista.printList(lista.head);
-
-    lista.head = lista.reverse(lista.head);
-    lista.printList(lista.head);
-
+            String str = "abcdef";
+            str = str.substring(0,2);
+            System.out.print(str);
 
 
 
@@ -24,3 +21,5 @@ public class Main {
 
     }
 }
+
+
