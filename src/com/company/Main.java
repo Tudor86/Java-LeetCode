@@ -1,17 +1,17 @@
 package com.company;
-
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-       // Sol7ReverseInteger sol = new Sol7ReverseInteger();
-
-
-     //   System.out.print(sol.reverse(123));
-
-            String str = "abcdef";
-            str = str.substring(0,2);
-            System.out.print(str);
+       List<String> myList = new ArrayList<>();
+        Sol22GenerateParentheses sol = new Sol22GenerateParentheses();
+        myList = sol.generateP(4);
+        for(String elemn : myList)
+            System.out.print(elemn + " ");
+        System.out.println(myList.size());
 
 
 
