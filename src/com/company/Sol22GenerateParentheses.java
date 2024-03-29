@@ -22,3 +22,10 @@ public class Sol22GenerateParentheses {
             btGen(sol, left, right + 1, s + "}",len);
     }
 }
+
+/*       List<String> myList = new ArrayList<>();
+        Sol22GenerateParentheses sol = new Sol22GenerateParentheses();
+        myList = sol.generateP(4);
+        for(String elemn : myList)
+            System.out.print(elemn + " ");
+        System.out.println(myList.size());*/

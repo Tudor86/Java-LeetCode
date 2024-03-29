@@ -5,7 +5,7 @@ public class RevLinkedList {
 
     Node head;
 
-    static class Node{
+     class Node{
         int data;
         Node next;
         Node(int d){
@@ -51,3 +51,9 @@ public class RevLinkedList {
     }
 }
 
+/*        RevLinkedList lista = new RevLinkedList();
+        lista.add(3);
+        lista.add(2);
+        lista.add(1);
+        lista.head = lista.reverse(lista.head);
+        lista.printList(lista.head);*/

@@ -6,15 +6,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-       List<String> myList = new ArrayList<>();
-        Sol22GenerateParentheses sol = new Sol22GenerateParentheses();
-        myList = sol.generateP(4);
-        for(String elemn : myList)
-            System.out.print(elemn + " ");
-        System.out.println(myList.size());
-
-
-
+        Sol118Pascal solutie = new Sol118Pascal();
+        solutie.setField(solutie.generate(5));
+        solutie.printRez(solutie.getField());
 
 
 
