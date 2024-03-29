@@ -34,7 +34,12 @@ public class Sol118Pascal {
             List<Integer> sol = Arrays.asList(temp);
             res.add(sol);
         }
-        return res;
+        for(int i = 2; i < numRows; i++)
+            for(int j= 1; j < i ;j++)
+                res.get(i).set(j,res.get(i-1).get(j-1) + res.get(i-1).get(j));
 
+
+
+        return res;
     }
 }
